@@ -16,10 +16,9 @@ const HeroSlideshow = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    // Increased to 3000ms (3 seconds)
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -28,11 +27,10 @@ const HeroSlideshow = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          // Adjusted duration to 1.2s for a professional feel over a 3s total cycle
-          transition={{ duration: 1.2, ease: "easeInOut" }}
+          transition={{ duration: 0.8 }}
           className="absolute inset-0"
         >
           <img
@@ -50,7 +48,7 @@ const HeroSlideshow = () => {
             key={`title-${current}`}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ delay: 0.2 }}
             className="text-primary font-heading font-bold text-3xl md:text-6xl mb-3"
           >
             {slides[current].title}
@@ -59,7 +57,7 @@ const HeroSlideshow = () => {
             key={`sub-${current}`}
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            transition={{ delay: 0.4 }}
             className="text-primary-foreground/80 text-lg md:text-2xl mb-6 font-light"
           >
             {slides[current].sub}
@@ -67,7 +65,7 @@ const HeroSlideshow = () => {
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.6 }}
             className="text-primary-foreground font-heading font-semibold text-xl md:text-3xl"
           >
             Keeping It Cool, Building It Right 💪
@@ -75,17 +73,13 @@ const HeroSlideshow = () => {
         </div>
       </div>
 
-      {/* Aligned Indicators */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center gap-3 z-10">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-3 rounded-full transition-all duration-500 ease-in-out ${
-              i === current 
-                ? "bg-primary w-10 opacity-100" 
-                : "bg-white/40 w-3 hover:bg-white/60"
+            className={`w-3 h-3 rounded-full transition-all ${
+              i === current ? "bg-primary w-8" : "bg-primary-foreground/40"
             }`}
           />
         ))}
