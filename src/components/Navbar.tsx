@@ -20,7 +20,7 @@ const Navbar = () => {
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Cool Knowledge" className="h-10 rounded-md" />
           <span className="font-heading font-bold text-primary-foreground text-lg hidden sm:inline">
-            Cool Knowledge
+            Cool Knowledge Enterprises
           </span>
         </a>
         <button
