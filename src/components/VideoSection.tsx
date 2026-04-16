@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const videos = [
-  "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  "https://www.youtube.com/embed/dQw4w9WgXcQ",
+  "https://www.youtube.com/embed/ayGhskLm4Io",
+  "https://www.youtube.com/embed/uYWHU-b1z6U",
+  "https://www.youtube.com/embed/ELuDOujqzVo",
 ];
 
 const VideoSection = () => {
