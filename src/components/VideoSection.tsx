@@ -35,9 +35,11 @@ const VideoSection = () => {
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl border border-border">
             <iframe
               key={current}
-              src={`${videos[current]}?autoplay=0&rel=0`}
+              /* UPDATED: Changed autoplay=1 and added mute=1 */
+              src={`${videos[current]}?autoplay=1&mute=1&rel=0`}
               title="Project video"
               className="w-full h-full"
+              /* UPDATED: Added autoplay to the allow string */
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
