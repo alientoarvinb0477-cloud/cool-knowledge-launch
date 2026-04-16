@@ -1,16 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import LogoIntro from "@/components/LogoIntro";
+import Navbar from "@/components/Navbar";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/ServicesSection";
+import ProductsSection from "@/components/ProductsSection";
+import ProjectGallery from "@/components/ProjectGallery";
+import VideoSection from "@/components/VideoSection";
+import ContactSection from "@/components/ContactSection";
+import FloatingButtons from "@/components/FloatingButtons";
+import Footer from "@/components/Footer";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [introComplete, setIntroComplete] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      {!introComplete && <LogoIntro onComplete={() => setIntroComplete(true)} />}
+      <Navbar />
+      <HeroSlideshow />
+      <AboutSection />
+      <ServicesSection />
+      <ProductsSection />
+      <ProjectGallery />
+      <VideoSection />
+      <ContactSection />
+      <Footer />
+      <FloatingButtons />
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
