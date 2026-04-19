@@ -6,17 +6,17 @@ const FloatingButtons = () => (
       href="https://www.facebook.com/coolknowledgeenterprises"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-25 h-25 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+      className="w-15 h-15 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
       aria-label="Chat on Facebook"
     >
-      <MessageCircle className="w-6 h-6 text-primary-foreground" />
+      <MessageCircle className="w-20 h-20 text-primary-foreground" />
     </a>
     <a
       href="tel:09957928639"
-      className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+      className="w-15 h-15 bg-green-500 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
       aria-label="Call Now"
     >
-      <Phone className="w-6 h-6 text-primary-foreground" />
+      <Phone className="w-20 h-20 text-primary-foreground" />
     </a>
   </div>
 );
