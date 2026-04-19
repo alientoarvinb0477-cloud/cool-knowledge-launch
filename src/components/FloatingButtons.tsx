@@ -6,7 +6,7 @@ const FloatingButtons = () => (
       href="https://www.facebook.com/coolknowledgeenterprises"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+      className="w-25 h-25 bg-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
       aria-label="Chat on Facebook"
     >
       <MessageCircle className="w-6 h-6 text-primary-foreground" />
