@@ -15,7 +15,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-md shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md shadow-lg">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <a href="#home" className="flex items-center gap-3">
           <img src={logo} alt="Cool Knowledge" className="h-10 rounded-md" />
