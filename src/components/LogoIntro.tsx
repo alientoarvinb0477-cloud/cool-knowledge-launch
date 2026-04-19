@@ -17,7 +17,7 @@ const LogoIntro = ({ onComplete }: { onComplete: () => void }) => {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-navy"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white"
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
